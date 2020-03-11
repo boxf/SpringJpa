@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of users</title>
+</head>
+<body>
+<h1>My list of users</h1>
+<div class="container">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+            <th>IMAGE</th>
+        </tr>
+        <tr th:each="index: ${usersList}">
+            <td th:text="${index.getId()}"/>
+            <td th:text="${index.getFirstName()}"/>
+            <td th:text="${index.getLastName()}"/>
+            <td th:text="${index.getEmail()}"/>
+            <td th:text="${index.getPassword()}"/>
+            <td><img th:src="'/file/'+${index.getImageName()}"/><td/>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>AddUser</title>
+</head>
+<body>
+<form method="post" action="#" th:action="@{/addUser}" th:object="${user}" enctype="multipart/form-data">
+    <p>First name : <input th:type="text" th:field="*{firstName}" th:placeholder="firstname..."/></p>
+    <p>Last name : <input th:type="text" th:field="*{lastName}" th:placeholder="lastname..."/></p>
+    <p>Email : <input th:type="email" th:field="*{email}" th:placeholder="email..."/></p>
+    <p>Password : <input th:type="password" th:field="*{password}" th:placeholder="password..."/></p>
+<!--    <p>Image : <input type="image" th:accept="images/png, images/jpg, images/svg" th:name="image"/></p>-->
+    <p> Image : <input th:type="file" accept="images/png, images/jpg, images.svg" name="file"/></p>
+
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

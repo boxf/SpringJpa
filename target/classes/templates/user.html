@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+<h1>Try!</h1>
+<p th:text="${user.get().getId()}"></p>
+<p th:text="${user.get().getFirstName()}"></p>
+<p th:text="${user.get().getLastName()}"></p>
+<p th:text="${user.get().getEmail()}"></p>
+<p th:text="${user.get().getPassword()}"></p>
+<p> <img th:src="'/file/'+${user.get().getImageName()}" /></p>
+
+</body>
+</html>
