@@ -7,6 +7,12 @@ pipeline {
       }
     }
 
+    stage('sonnar') {
+      steps {
+        waitForQualityGate true
+      }
+    }
+
   }
   environment {
     my_test = '1'
