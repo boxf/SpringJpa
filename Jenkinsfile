@@ -7,18 +7,6 @@ pipeline {
       }
     }
 
-    stage('test') {
-      steps {
-        withSonarQubeEnv 'withSonarQubeEnv'
-      }
-    }
-
-    stage('sonnar') {
-      steps {
-        waitForQualityGate true
-      }
-    }
-
   }
   environment {
     my_test = '1'
