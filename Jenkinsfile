@@ -10,7 +10,11 @@ pipeline {
 
     stage('sonar') {
       steps {
-        bat(script: 'git \'https://github.com/boxf/SpringJpa.git\'   }   stage(\'SonarQube analysis\') {     withSonarQubeEnv(installationName: \'My SonarQube Server\') {        bat \'mvn sonar:sonar\'     }', returnStdout: true)
+        git 'https://github.com/boxf/SpringJpa.git'
+        withSonarQubeEnv('My sonarQuebe Server') {
+          bat 'mvn sonar:sonar'
+        }
+
       }
     }
 
