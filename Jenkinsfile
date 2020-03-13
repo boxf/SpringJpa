@@ -7,11 +7,11 @@ pipeline {
       }
     }
 
-    stage('slack') {
+    stage('sonar') {
       steps {
         sh '''node {
   stage(\'SCM\') {
-    git \'https://github.com/CedricP-Git/SpringJPA.git\'
+    git \'https://github.com/boxf/SpringJpa.git\'
   }
   stage(\'SonarQube analysis\') {
     withSonarQubeEnv(installationName: \'Sonar_SpringJpaMy\') { // You can override the credential to be used
