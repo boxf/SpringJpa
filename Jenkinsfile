@@ -10,7 +10,7 @@ pipeline {
 
     stage('sonar') {
       steps {
-        withSonarQubeEnv('My sonarQuebe Server') {
+        withSonarQubeEnv('Sonar_TravelNShare') {
           bat 'mvn sonar:sonar'
         }
 
