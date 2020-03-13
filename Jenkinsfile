@@ -4,6 +4,7 @@ pipeline {
     stage('builder') {
       steps {
         echo 'simple pipeline'
+        sh 'echo \'test\''
       }
     }
 
