@@ -10,7 +10,6 @@ pipeline {
 
     stage('sonar') {
       steps {
-        git 'https://github.com/boxf/SpringJpa.git'
         withSonarQubeEnv('My sonarQuebe Server') {
           bat 'mvn sonar:sonar'
         }
