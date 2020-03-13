@@ -14,8 +14,8 @@ pipeline {
     git \'https://github.com/boxf/SpringJpa.git\'
   }
   stage(\'SonarQube analysis\') {
-    withSonarQubeEnv(installationName: \'Sonar_SpringJpaMy\') { // You can override the credential to be used
-      sh \'mvn sonar:sonar\'
+    withSonarQubeEnv(installationName: \'Sonar_SpringJpa\') { // You can override the credential to be used
+      bat \'mvn sonar:sonar\'
     }
   }
 }'''
