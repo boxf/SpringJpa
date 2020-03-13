@@ -4,7 +4,7 @@ pipeline {
     stage('builder') {
       steps {
         echo 'simple pipeline'
-        sh 'echo "test"'
+        bat 'echo "test"'
       }
     }
 
