@@ -11,7 +11,7 @@ pipeline {
     stage('sonar') {
       steps {
         withSonarQubeEnv('Sonar_TravelNShare') {
-          bat 'mvn sonar:sonar'
+          sh 'mvn sonar:sonar'
         }
 
       }
